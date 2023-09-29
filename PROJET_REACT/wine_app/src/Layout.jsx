@@ -6,15 +6,10 @@ return (
 
     <>
     <header>
-<nav>
+<nav className="background-color: rgb(203 213 225)">
 
-<ul className="list-none fixed top-2 left-12 flex">
+<ul className="list-none fixed top-2 left-12 flex ">
 
-    <li className="mr-6" >
-
-    <Link to="Home">Home</Link>
-
-    </li>
 
     <li className="mr-6">
 

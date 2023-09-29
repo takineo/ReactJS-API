@@ -38,8 +38,6 @@ function Cocktail() {
     const AddFavorites = (id) => {
         const item = JSON.parse(localStorage.getItem('favoris'));
 
-        console.log();
-
         if(item !== null){
             localStorage.setItem('favoris', JSON.stringify([...item, id]))
         } else  {
@@ -52,23 +50,23 @@ function Cocktail() {
     return (
 
         <div className= "mt-24 shop w-screen text-center">
-        <h1>Cocktails :</h1>
+        <h1 className='font-serifConsolas'>Cocktails :</h1>
  {/* Barre de recherche */}
         <div className="search-bar mb-12">
                 <input type='text' value={search} onChange={(e) => handleChange(e)}  />
-                <button onClick={() => handleSearch()}>Chercher</button>
+                <button onClick={() => handleSearch()}>Search</button>
                 
         </div>
 {/* Recherche de cocktail */}
         {(!showFavorites && cocktails) &&
             <ul className="products grid grid-cols-4 z-10 ">
                 {cocktails.map(drinks => (
-                <li className="py-10 px-6 relative" key={drinks.idDrink}>
-                    <img className='mx-auto' src={drinks.strDrinkThumb} />
+                <div className="py-10 px-6 relative" key={drinks.idDrink}>
+                    <img className='rounded-lg shadow-lg' src={drinks.strDrinkThumb} />
                     <h2 className='font-bold'>{drinks.strGlass}</h2>
                     <h3 className='font-serif'>{drinks.strCategory}</h3>
-                    <button className='' onClick={() => AddFavorites(drinks.idDrink)} >Favoris</button>
-                </li>
+                    <button className='' onClick={() => AddFavorites(drinks.idDrink)} >Favorites</button>
+                </div>
                 ))}
             </ul>
         
