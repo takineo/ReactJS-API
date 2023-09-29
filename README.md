@@ -6,7 +6,7 @@
 ### Fontionnalités
 1. Récupérer les données de l'API telle que le nom l'image et la catégorie du coktail dans l'API
 2. On peux sélectionner un coktail et l'ajouter dans ses favoris 
-3. 
+3. Sauvegarde des données dans le local storage
 4.
 
 
